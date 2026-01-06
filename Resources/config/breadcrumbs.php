@@ -7,9 +7,7 @@ use WhiteOctober\BreadcrumbsBundle\Templating\Helper\BreadcrumbsHelper;
 use WhiteOctober\BreadcrumbsBundle\Twig\Extension\BreadcrumbsExtension;
 
 return static function (ContainerConfigurator $container): void {
-    $services = $container->services()
-        ->defaults()
-            ->public(false);
+    $services = $container->services();
 
     // Our service, for controllers
     $services->set(Breadcrumbs::class)
